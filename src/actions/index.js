@@ -20,7 +20,7 @@ export const deleteTodo=(id)=>({
 })
 
 //设置可见todolist ation
-export const setVisibilityFilter(filter)=>({
+export const setVisibilityFilter=(filter)=>({
 	type:"SET_VISIBILITY_FILTER",
 	filter
 })

@@ -1,12 +1,12 @@
 const todo=(state,action) => {
 	switch (action.type){
-		case:'ADD_TODO':
+		case 'ADD_TODO':
 	    return {
 		id:action.id,
 		text:action.text,
 		completed:false,
 	};
-        case:'TOOGLE_TODO':
+        case 'TOOGLE_TODO':
         	if(state.id!==action.id){
         		return state
         }
@@ -17,9 +17,9 @@ const todo=(state,action) => {
 }
 
 
-const todos=(state,action) =>{
+const todos=(state=[],action) =>{
 	switch (action.type){
-		case:'ADD_TODO': //如果是添加一条todo，则在原array中增添一个新的todo
+		case 'ADD_TODO': //如果是添加一条todo，则在原array中增添一个新的todo
 		return [
                ...state,
                todo(undefined,action)
@@ -28,6 +28,7 @@ const todos=(state,action) =>{
 		return state.map((t)=>todo(t,action));
 		case 'DELETE_TODO':
 		return state.filter(todo=>todo.id!==action.id) //如果原state的id不等于action.id，则保留，等于则表示选中一条todo，及被过滤掉，
+	    default: return state
 	}
 };
 

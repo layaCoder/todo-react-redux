@@ -7,11 +7,10 @@ export default class extends Component{
 	render(){
 		return(
 			<div>
-			 <AddTodo/>
-			 <VisibleTodoList/>
-			 <Footer/>
+			<AddTodo/>
+			<VisibleTodoList/>
+			<Footer/>
 			</div>
 			)
 	}
-
 }
