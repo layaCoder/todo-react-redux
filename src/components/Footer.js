@@ -4,11 +4,11 @@ import FilterLink from '../containers/FilterLink';
 
 export default class extends Component{
 	render(){
-		
 		return(
+		//(SHOW_ALL,SHOW_ACTIVE,SHOW_COMPLETED为Container组件FilterLink中的ownProps参数)
 		<p>
 		 Show:{" "}
-		 <FilterLink filter="SHOW_ALL">
+		 <FilterLink filter="SHOW_ALL"> 
 		  ALL
 		 </FilterLink>
 		 {" | "}

@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
-import {addTodo} from '../actions/index';
+//import {addTodo} from '../actions/index';
 
-export default class extends Component{
+/*export default class extends Component{
 	render(){
 		const {dispatch} = this.props; //组件的props赋值给dispatch
 		return(
@@ -18,6 +18,29 @@ export default class extends Component{
 			  <button type="submit">Add Todo </button>
 			 </form>
 			</div>
+			)
+	}
+}
+*/
+
+export default class extends Component{
+	render(){
+
+		const {submitClick} = this.props;//接收container组件所传来的submitClick方法，也可以通过dispatch(state,action)的方式来实现（参见上面备注)
+		return (
+             <div>
+              <form onSubmit={e=>{
+              	e.preventDefault(); //防止提交时事件冒泡
+              	if(!this.input.value.trim()){
+              		return
+              	}
+              	submitClick(this.input.value);
+              	this.input.value=""
+              }}>
+               <input type="text" placeholder="what to do???" ref={node=>{this.input=node}}/>
+               <button type="submit">Add-Todo</button>
+              </form>
+             </div>
 			)
 	}
 }
