@@ -6,7 +6,8 @@ import Footer from './Footer';
 export default class extends Component{
 	render(){
 		return(
-			<div>
+			<div className="container">
+			<h1>React-redux ToDo</h1>
 			<AddTodo/>
 			<VisibleTodoList/>
 			<Footer/>

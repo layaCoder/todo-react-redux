@@ -5,6 +5,7 @@ import App from './components/App';
 import { createStore } from 'redux';
 import reducer from './reducers/index';
 import {Provider} from 'react-redux';
+import './stylesheet/main.scss';
 
 
 // Render the main component into the dom

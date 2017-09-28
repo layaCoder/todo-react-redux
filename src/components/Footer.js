@@ -6,7 +6,7 @@ export default class extends Component{
 	render(){
 		return(
 		//(SHOW_ALL,SHOW_ACTIVE,SHOW_COMPLETED为Container组件FilterLink中的ownProps参数)
-		<p>
+		<p className="footer">
 		 Show:{" "}
 		 <FilterLink filter="SHOW_ALL"> 
 		  ALL

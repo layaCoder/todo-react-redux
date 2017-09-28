@@ -28,7 +28,7 @@ export default class extends Component{
 
 		const {submitClick} = this.props;//接收container组件所传来的submitClick方法，也可以通过dispatch(state,action)的方式来实现（参见上面备注)
 		return (
-             <div>
+             <div className="inner">
               <form onSubmit={e=>{
               	e.preventDefault(); //防止提交时事件冒泡
               	if(!this.input.value.trim()){
